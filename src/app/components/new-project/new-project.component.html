@@ -1,0 +1,51 @@
+<section class="container">
+    <form class="form-tranfer"  [formGroup]="form" (submit)="submit()">
+        <h2 class="form-title">Nova Projeto</h2>
+        <div class="form-field">
+            <label class="form-field__label" for="title">Titulo</label>
+            <input class="form-field__input" id="title" type="text" formControlName="title" />
+        </div>
+        <div class="form-field">
+            <label class="form-field__label" for="description">Descrição</label>
+            <textarea class="form-field__input" id="description" type="text" formControlName="description"></textarea>
+        </div>
+        <div class="form-field">
+            <label class="form-field__label" for="statusProject">Status do Projeto</label>
+            <div class="status-project">
+                <label class="container-status">Enviado
+                    <input type="radio" formControlName="statusProject" value="enviado">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container-status">Falta Enviar
+                    <input type="radio" formControlName="statusProject" value="falta Enviar"> 
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container-status">Aprovado
+                    <input type="radio" formControlName="statusProject" value="aprovado">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+        </div>
+        <div class="form-field">
+            <label class="form-field__label" for="destino">Vistoria</label>
+            <div class="status-project">
+                <label class="container-status">Solicitado
+                    <input type="radio" formControlName="statusSurvey" value="solicitado">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container-status">Falta solicitar
+                    <input type="radio" formControlName="statusSurvey" value="falta Solicitar">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+        </div>
+        <div class="form-field">
+            <label class="form-field__label" for="value">Valor do Projeto</label>
+            <input class="form-field__input" id="value" type="number" formControlName="value" />
+        </div>    
+        <div class="button-wrapper">
+            <button class="button" type="submit">Salvar</button>
+        </div>
+    </form>
+    
+</section>

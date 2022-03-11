@@ -1,0 +1,22 @@
+.body-table{
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.td-options{
+    display: flex;
+    justify-content: center;
+    .button-delete-edit{
+        padding: 4px;
+    }
+    .btn-edit{
+        color: #fff;
+        background-color: #333333;
+        border-color: #21130d82;
+    }
+    .btn-edit:hover{
+        opacity: 0.8;
+        transition: 0.1s;
+    }
+}
