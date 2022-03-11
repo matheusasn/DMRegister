@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ProjectService } from 'src/app/services/project/project.service';
 import { ProjectComponent } from '../project/project.component';
 
@@ -16,6 +17,7 @@ export class NewProjectComponent implements OnInit {
   constructor(
     private readonly fb: FormBuilder,
     private service: ProjectService,
+    private router: Router,
     ) { }
 
   ngOnInit(): void {
@@ -32,6 +34,7 @@ export class NewProjectComponent implements OnInit {
     const dataProjects: ProjectComponent = this.form.getRawValue();
     this.service.save(dataProjects).subscribe(result => {
       console.log(result)
+      this.router.navigateByUrl('project')
     }, err => console.log(err));
   }
 
